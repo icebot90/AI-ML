@@ -11,16 +11,30 @@
 # else:
 #     print(f"{a} is not a prime number")
 
-#fibonacci series
-def fibonacci(n):
-    if n==0: 
-        return "Invalid number"
-    if n==1:
-        return 0
-    elif n==2:
-        return 1
-    else:
-        return fibonacci(n-1)+fibonacci(n-2)
+# #fibonacci series
+# def fibonacci(n):
+#     a=0
+#     b=1
+#     fibo=[a,b]
+#     for i in range(n-2):
+#         fibo.append(a+b)
+#         temp=a
+#         a=b
+#         b=temp+b
+#     return fibo
 
-x=int(input("Enter the number fibonacci elements required: "))
-print(fibonacci(x))
+# x=int(input("Enter the number fibonacci elements required: "))
+# print(fibonacci(x))
+
+#fibonacci series using recursion
+def fibonacci_rec(n):
+    if n<=1:
+        return n
+    else:
+        return fibonacci_rec(n-1)+fibonacci_rec(n-2)
+c=int(input("Enter the number of terms required: "))
+if c<=0:
+    print("Enter a positive integer")
+else:
+    for i in range(c):
+        print(fibonacci_rec(i))
