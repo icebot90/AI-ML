@@ -1,23 +1,23 @@
-# #binary search
-# def binary_search(n):
-#     a=0
-#     b=len(n)-1
-#     ele=int(input("Enter the element to be searched: "))
-#     while a<=b:
-#         m=b-a//2
-#         if n[m]==ele:
-#             return f"Element was found at {m} location"
-#         elif ele<n[m]:
-#             b=m-1
-#         else:
-#             a=m+1
-#     return "Element was not found"
-# k=int(input("Enter the number of elements in the list: "))
-# n=[]
-# print("Enter the elements of list in ascending order.")
-# for i in range(k):
-#     n.append(int(input()))
-# print(binary_search(n))
+#binary search
+def binary_search(n):
+    a=0
+    b=len(n)-1
+    ele=int(input("Enter the element to be searched: "))
+    while a<=b:
+        m=b-a//2
+        if n[m]==ele:
+            return f"Element was found at {m} location"
+        elif ele<n[m]:
+            b=m-1
+        else:
+            a=m+1
+    return "Element was not found"
+k=int(input("Enter the number of elements in the list: "))
+n=[]
+print("Enter the elements of list in ascending order.")
+for i in range(k):
+    n.append(int(input()))
+print(binary_search(n))
 
 #stack implementation using lists
 def push(stack):
