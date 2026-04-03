@@ -1,23 +1,23 @@
-# #binary search
-# def binary_search(n):
-#     a=0
-#     b=len(n)-1
-#     ele=int(input("Enter the element to be searched: "))
-#     while a<=b:
-#         m=b-a//2
-#         if n[m]==ele:
-#             return f"Element was found at {m} location"
-#         elif ele<n[m]:
-#             b=m-1
-#         else:
-#             a=m+1
-#     return "Element was not found"
-# k=int(input("Enter the number of elements in the list: "))
-# n=[]
-# print("Enter the elements of list in ascending order.")
-# for i in range(k):
-#     n.append(int(input()))
-# print(binary_search(n))
+#binary search
+def binary_search(n):
+    a=0
+    b=len(n)-1
+    ele=int(input("Enter the element to be searched: "))
+    while a<=b:
+        m=b-a//2
+        if n[m]==ele:
+            return f"Element was found at {m} location"
+        elif ele<n[m]:
+            b=m-1
+        else:
+            a=m+1
+    return "Element was not found"
+k=int(input("Enter the number of elements in the list: "))
+n=[]
+print("Enter the elements of list in ascending order.")
+for i in range(k):
+    n.append(int(input()))
+print(binary_search(n))
 
 #stack implementation using lists
 def push(stack,top,a):
@@ -62,41 +62,41 @@ while cont==True:
         cont=False
         print("Exiting...")
 
-# #Queue implementation using list
-# def enqueue(queue,rear,n):
-#     ele=int(input("Enter the element to be added: "))
-#     if rear<n:
-#         queue.append(ele)
-#         print(f"Element {ele} is added to queue.")
-#         rear+=1
-#     else:
-#         print("Queue is Overflow")
+#Queue implementation using list
+def enqueue(queue,rear,n):
+    ele=int(input("Enter the element to be added: "))
+    if rear<n:
+        queue.append(ele)
+        print(f"Element {ele} is added to queue.")
+        rear+=1
+    else:
+        print("Queue is Overflow")
 
-# def dequeue(queue,front,n):
-#     if front<0:
-#         ele=queue[front]
-#         queue.remove(ele)
-#         print(f"Element {ele} has been removed.")
-#         front+=1
-#     else:
-#         print("Queue is Underflow")
+def dequeue(queue,front,n):
+    if front<0:
+        ele=queue[front]
+        queue.remove(ele)
+        print(f"Element {ele} has been removed.")
+        front+=1
+    else:
+        print("Queue is Underflow")
 
-# def display(queue):
-#     print(queue)
+def display(queue):
+    print(queue)
 
-# n=int(input("Enter the maximum number of elements allowed on the queue: "))-1
-# queue=[]
-# front=0
-# cont=True
-# while cont==True:
-#     rear=len(queue)-1
-#     x=int(input("Enter your choice:\n1.Enqueue\n2.Dequeue\n3.Display\n4.Exit  "))
-#     if x==1:
-#         enqueue(queue,rear,n)
-#     elif x==2:
-#         dequeue(queue,front,n)
-#     elif x==3:
-#         display(queue)
-#     else:
-#         cont=False
-#         print("Exiting....")
+n=int(input("Enter the maximum number of elements allowed on the queue: "))-1
+queue=[]
+front=0
+cont=True
+while cont==True:
+    rear=len(queue)-1
+    x=int(input("Enter your choice:\n1.Enqueue\n2.Dequeue\n3.Display\n4.Exit  "))
+    if x==1:
+        enqueue(queue,rear,n)
+    elif x==2:
+        dequeue(queue,front,n)
+    elif x==3:
+        display(queue)
+    else:
+        cont=False
+        print("Exiting....")

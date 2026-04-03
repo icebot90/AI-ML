@@ -1,54 +1,54 @@
-# #prime numbers
-# def prime_number(n):
-#     for i in range(2,n//2):
-#         if n%i==0:
-#             return False
-#     return True
+#prime numbers
+def prime_number(n):
+    for i in range(2,n//2):
+        if n%i==0:
+            return False
+    return True
 
-# a=int(input("Enter a number: "))
-# if prime_number(a) is True:
-#     print(f"{a} is a prime number")
-# else:
-#     print(f"{a} is not a prime number")
+a=int(input("Enter a number: "))
+if prime_number(a) is True:
+    print(f"{a} is a prime number")
+else:
+    print(f"{a} is not a prime number")
 
-# #fibonacci series
-# def fibonacci(n):
-#     a=0
-#     b=1
-#     fibo=[a,b]
-#     for i in range(n-2):
-#         fibo.append(a+b)
-#         temp=a
-#         a=b
-#         b=temp+b
-#     return fibo
+#fibonacci series
+def fibonacci(n):
+    a=0
+    b=1
+    fibo=[a,b]
+    for i in range(n-2):
+        fibo.append(a+b)
+        temp=a
+        a=b
+        b=temp+b
+    return fibo
 
-# x=int(input("Enter the number fibonacci elements required: "))
-# print(fibonacci(x))
+x=int(input("Enter the number fibonacci elements required: "))
+print(fibonacci(x))
 
-# #fibonacci series using recursion
-# def fibonacci_rec(n):
-#     if n<=1:
-#         return n
-#     else:
-#         return fibonacci_rec(n-1)+fibonacci_rec(n-2)
-# c=int(input("Enter the number of terms required: "))
-# if c<=0:
-#     print("Enter a positive integer")
-# else:
-#     for i in range(c):
-#         print(fibonacci_rec(i))
+#fibonacci series using recursion
+def fibonacci_rec(n):
+    if n<=1:
+        return n
+    else:
+        return fibonacci_rec(n-1)+fibonacci_rec(n-2)
+c=int(input("Enter the number of terms required: "))
+if c<=0:
+    print("Enter a positive integer")
+else:
+    for i in range(c):
+        print(fibonacci_rec(i))
 
-# #Palindrome
-# def palindrome(s):
-#     s=s.lower()
-#     x=s[::-1]
-#     if s==x:
-#         return "It is a palindrome"
-#     else:
-#         return "It is not a palindrome"
-# s=input("Enter a word to check: ")
-# print(palindrome(s))
+#Palindrome
+def palindrome(s):
+    s=s.lower()
+    x=s[::-1]
+    if s==x:
+        return "It is a palindrome"
+    else:
+        return "It is not a palindrome"
+s=input("Enter a word to check: ")
+print(palindrome(s))
 
 #File read/write
 def write():
@@ -68,3 +68,4 @@ while cont==True:
         read()
     else:
         cont=False
+        print("Exiting....")

@@ -3,7 +3,6 @@ import numpy as np
 
 df=pd.read_csv('week-1/student_marks.csv')
 all=df[["Maths","Physics","Chemistry","English","Biology","Economics","History","Civics"]].values
-print(np.sum(all[0]))
 count=0
 total=0
 max=0
